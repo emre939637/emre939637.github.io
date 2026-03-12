@@ -1,0 +1,115 @@
+body{
+    margin: auto;
+    padding: auto;
+}
+.kutu{
+    max-width:auto;
+    width: 90%;
+    margin: 15px;
+    padding: 30px 10px;
+    height: auto;
+    background-color: #f0f8ff; 
+    border-radius: 10px;
+    box-shadow: 3px 2px 1px grey;
+    font-size: 1.2em;
+}
+
+/* Varsayılan: anket radio’ları gizli */
+input[type="radio"] {
+    display: none;
+}
+
+/* Cinsiyet radio’ları görünür */
+.gorunen-radio {
+    display: inline-block !important;
+    margin-right: 5px;
+}
+
+.radio-grup-kutu label{
+    display: block;
+    border-radius: 25px;
+    width: 85%;
+    max-width: auto;
+    padding: 10px;
+    cursor: pointer;
+    margin: 2px 15px;
+    background-color: #315deed6;
+    box-shadow: 2px 2px 1px rgb(138, 138, 138);
+    transition: all 0.2s ease;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    white-space: normal;
+    word-break: break-word;
+    overflow: break-word;
+}
+.radio-grup-kutu label:hover{
+   background-color:#002ba3 ;
+     color: white;
+
+}
+.radio-grup-kutu input[type="radio"]:checked + label { 
+    background-color: #099126; 
+    border-color: #c6d1cb;
+    color: white;
+}
+input[type="submit"]{
+    outline: none;
+    border:none;
+    margin: 15px 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: rgb(13, 66, 241);
+    border-radius: 25px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+}
+.hata {
+    display: none;
+    color: red;
+    margin: 10px 0;
+}
+
+/* Sallanma Animasyonu */
+@keyframes salla {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.sallan {
+    animation: salla 0.4s ease-in-out;
+    
+}
+
+/* Hata mesajı stili (isteğe bağlı) */
+.hata {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+input[type=text]{
+    display: block;
+    font-size: 18px;
+    margin: 15px;
+    background: none;
+    outline: none;
+    border: none;
+    min-width: 50%;
+    height: 30px;
+    border-bottom: 1px solid #7a7a7a;
+}
+input[type=text]:focus{
+    border-bottom: 3px solid rgb(13, 66, 241);
+}
+
+#anketAlan {
+    height: auto; /* içerikle uyumlu */
+    padding: 20px;
+    background-color: #f0f8ff; ;
+    border-radius: 10px;
+    box-shadow: 5px 2px 1px grey;
+    transition: all 0.3s ease; /* yükseklik değişimi animasyonu */
+}

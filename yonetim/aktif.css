@@ -1,0 +1,109 @@
+.icerik{
+    width: 96%;
+    background-color:#dbe3e657;
+    float: left;
+    padding: 25px;
+    height: auto;
+}
+input[type=text],input[type=password]{
+  display: block;
+        font-size: 18px;
+        margin: 15px;
+       background: none;
+        outline: none;
+        border: none;
+        min-width: 300px;
+        width: auto;
+       
+        height: 30px;
+       border-bottom: 1px solid #7a7a7a;
+    }
+    button[type=button]{
+  background: #17a2b8;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+    /* Kartları saran ana taşıyıcı */
+.kart-kapsayici {
+    display: flex;         /* Yan yana dizilimi sağlar */
+    flex-wrap: wrap;      /* Sığmayanları aşağı atar */
+    gap: 20px;            /* Kartlar arası boşluk */
+    justify-content: center; /* Kartları merkeze hizalar */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+   
+}
+
+.card {
+    /* Masaüstünde 3 tane yan yana (boşluklar dahil) */
+    width: calc(33.333% - 40px); 
+    min-width: 300px; /* Çok küçülmesini engeller */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: white;
+    padding: 15px;
+     box-shadow: 1px 4px 7px rgba(136, 135, 135, 0.826);
+    font-size: 1.2em;
+}
+
+.card-baslik{
+    font-size: 1.1em;
+    text-align: left;
+}
+/* Resim Alanları */
+.card-resim {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    background-image: url('back.png'); 
+    background-size: cover; 
+    background-position: center; 
+    overflow: hidden;
+}
+
+.card-resim1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.65); /* Soldurma efekti */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- MOBİL UYUMLULUK --- */
+@media screen and (max-width: 1024px) {
+    /* Tabletlerde 2'li dizilim */
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Mobilde tam genişlik (alt alta) */
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card-resim {
+        height: 180px;
+    }
+
+    .card-islem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-islem button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
